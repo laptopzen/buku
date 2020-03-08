@@ -3,7 +3,7 @@ extends layout/default.pug
 block isi
   .list-group
     each x in post
-      a.list-group-item(href=`post/${x.judul}.html`)
+      a.list-group-item(href=`post/${x.judul.replace(/ /g, '-')}.html`)
         strong #{x.judul}
         br
         em #{x.penulis}
