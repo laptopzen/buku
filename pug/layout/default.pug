@@ -1,5 +1,25 @@
--
-  post = JSON.stringify([
-    "hello world"
-  ])
-  post = JSON.parse(post)
+extends ../database.pug
+  
+block start
+  mixin css(x)
+    link(rel="stylesheet" href=`vendor/${x}`)
+    link(rel="stylesheet" href=`../vendor/${x}`)
+ 
+  doctype html
+  html
+    head
+      title Buku
+      meta(charset="utf-8")
+      meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+      +css("bootstrap/css/bootstrap.min.css")
+      style 
+        include:stylus ../include/init.stylus
+        block style
+    body
+      .navbar.navbar-default.navbar-fixed-top
+        .container
+          .navbar-header
+            block brand
+              a.navbar-brand(href="index.html") Buku
+      .container
+        block isi

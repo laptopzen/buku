@@ -1,0 +1,8 @@
+-
+  post = JSON.stringify([{
+    judul: "Status hukum demokrasi",
+    penulis: `Abdul mun'im musthofa halimah`
+  }])
+  post = JSON.parse(post).sort((a, b) => a.judul.localeCompare(b.judul))
+  
+block start
