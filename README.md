@@ -1,3 +1,7 @@
+# demo
+
+<https://mzaini30.com/buku>
+
 # instalasi
 
 Untuk Linux, tambahkan `sudo` di depannya
